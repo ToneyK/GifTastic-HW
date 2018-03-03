@@ -20,7 +20,7 @@ $(function () {
 //ON CLICK API CALL FUNCTION 
 	$(document).on("click", ".animal", function () {
 		var queryText = $(this).text();
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + queryText + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + queryText + "&api_key=dc6zaTOxFJmzC&limit=10";
 		console.log(queryURL);
 
 		$.ajax({
