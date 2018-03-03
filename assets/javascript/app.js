@@ -28,15 +28,14 @@ $(function () {
 			method: "GET"
 		}).then(function (response) {
 			console.log(response);
-			image.attr("src", results[i].images.fixed_height.url);
 			var results = response.data;
 			var rating = results[i].rating;
 			var p = $("<p>").text("Rating: " + rating);
 			var image = $("<img>");
 			var gifDiv = $("<div class='item'>");
+			image.attr("src", results[i].images.fixed_height.url);
 			gifDiv.prepend(p);
 			gifDiv.prepend(image);
-
 			$("#gifs-appear-here").prepend(gifDiv);
 
 		});
